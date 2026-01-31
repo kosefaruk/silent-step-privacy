@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Silent Step — Destek (Support)</title>
+  <meta name="description" content="Silent Step uygulaması için destek ve iletişim sayfası." />
+  <style>
+    :root {
+      --bg: #0b1020;
+      --card: rgba(255, 255, 255, 0.06);
+      --text: rgba(255, 255, 255, 0.92);
+      --muted: rgba(255, 255, 255, 0.70);
+      --border: rgba(255, 255, 255, 0.12);
+      --link: #7dd3fc;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Arial, sans-serif;
+      background: radial-gradient(1200px 600px at 20% 0%, rgba(125,211,252,0.20), transparent 55%),
+                  radial-gradient(900px 500px at 80% 20%, rgba(167,139,250,0.18), transparent 60%),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+    }
+    .wrap {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 32px 16px 56px;
+    }
+    header {
+      padding: 18px 0 8px;
+    }
+    .badge {
+      display: inline-block;
+      font-size: 12px;
+      padding: 6px 10px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--muted);
+      background: rgba(255,255,255,0.03);
+    }
+    h1 {
+      margin: 14px 0 8px;
+      font-size: 34px;
+      letter-spacing: -0.02em;
+    }
+    p { margin: 10px 0; color: var(--muted); }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 18px;
+    }
+    @media (min-width: 860px) {
+      .grid { grid-template-columns: 1fr 1fr; }
+    }
+    .card {
+      border: 1px solid var(--border);
+      background: var(--card);
+      border-radius: 16px;
+      padding: 18px 18px;
+      backdrop-filter: blur(8px);
+    }
+    .card h2 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      color: var(--text);
+    }
+    ul { margin: 10px 0 0; padding-left: 18px; color: var(--muted); }
+    li { margin: 6px 0; }
+    .kv {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 8px 12px;
+      margin-top: 10px;
+      color: var(--muted);
+    }
+    .kv b { color: var(--text); font-weight: 600; }
+    footer {
+      margin-top: 22px;
+      border-top: 1px solid var(--border);
+      padding-top: 14px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 14px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.05);
+      color: var(--text);
+    }
+    .btn:hover { background: rgba(255,255,255,0.08); text-decoration: none; }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      font-size: 0.95em;
+      background: rgba(255,255,255,0.06);
+      padding: 2px 6px;
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,0.10);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <span class="badge">Silent Step • App Support</span>
+      <h1>Destek (Support)</h1>
+      <p>Silent Step uygulamasıyla ilgili soru, hata bildirimi veya önerilerin için buradan bize ulaşabilirsin.</p>
+    </header>
+
+    <div class="grid">
+      <section class="card">
+        <h2>İletişim</h2>
+        <div class="kv">
+          <b>E-posta</b>
+          <div><a href="mailto:farukkose19@gmail.com">support</a></div>
+
+          <b>Konu</b>
+          <div><code>[Silent Step]</code> Destek / Hata / Öneri</div>
+        </div>
+        <a class="btn" href="mailto:farukkose19@gmail.com?subject=%5BSilent%20Step%5D%20Destek">E-posta ile destek iste</a>
+      </section>
+
+      <section class="card">
+        <h2>Daha hızlı çözüm için</h2>
+        <p>Mail atarken şu bilgileri yazarsan daha hızlı yardımcı oluruz:</p>
+        <ul>
+          <li>Uygulama sürümü (örn. 1.0.0)</li>
+          <li>Cihaz modeli (örn. iPhone 13)</li>
+          <li>iOS sürümü (örn. iOS 17.x)</li>
+          <li>Sorunu tekrar etme adımları (1-2-3)</li>
+          <li>Ekran görüntüsü / ekran kaydı (varsa)</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Sık Sorulanlar (SSS)</h2>
+        <ul>
+          <li><b>Videolar açılmıyor / çok yavaş:</b> İnternet bağlantını kontrol et. Uygulamayı kapat-aç yap. Devam ederse hangi videoda olduğunu yaz.</li>
+          <li><b>Takvimde kayıt görünmüyor:</b> Uygulamanın güncel olduğundan emin ol. Kapat-aç yap. Ekran görüntüsü eklemek iyi olur.</li>
+          <li><b>Uygulama kapanıyor / donuyor:</b> Hangi ekranda ne yaptığını yaz. Mümkünse kısa ekran kaydı ekle.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Gizlilik</h2>
+        <p>Gizlilik politikamıza aşağıdan ulaşabilirsin:</p>
+        <p><a href="../privacy/" rel="noopener">Privacy Policy</a></p>
+      </section>
+    </div>
+
+    <footer>
+      <div>Son güncelleme: 2026-01-31</div>
+      <div>© <span id="y"></span> Silent Step</div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
