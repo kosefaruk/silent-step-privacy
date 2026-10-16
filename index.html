@@ -19,9 +19,9 @@
   <div class="wrap">
     <h1>Silent Step - Gizlilik Politikası</h1>
     <div class="meta">
-      <div><strong>Son güncelleme:</strong> 31.01.2026</div>
-      <div><strong>Geliştirici:</strong> faruk kose</div>
-      <div><strong>İletişim:</strong> <a href="mailto:farukkose19@gmail.com">[E-posta]</a></div>
+      <div><strong>Son güncelleme:</strong> 16.10.2026</div>
+      <div><strong>Geliştirici:</strong> Faruk Köse</div>
+      <div><strong>İletişim:</strong> <a href="mailto:farukkose19@gmail.com">farukkose19@gmail.com</a></div>
     </div>
 
     <div class="box">
@@ -34,33 +34,52 @@
     </p>
 
     <h2>2. Topladığımız Veriler</h2>
-    <p>Uygulamanın işlevlerini sunabilmek için aşağıdaki veriler işlenebilir:</p>
+    <p>Uygulamanın işlevlerini sunabilmek için aşağıdaki veriler işlenir:</p>
     <ul>
-      <li><strong>Kimlik/Profil Bilgileri:</strong> Ad-soyad, okul numarası, doğum tarihi</li>
-      <li><strong>Cihaz Bilgileri:</strong> Cihaz kimliği (UUID) ve temel cihaz bilgileri (model/işletim sistemi vb.)</li>
-      <li><strong>Uygulama Verileri:</strong> Oturum (session) bilgileri (başlangıç/bitiş zamanı, tamamlanma durumu vb.)</li>
-      <li><strong>Teknik Veriler:</strong> Uygulama hataları ve performans iyileştirmeleri için sınırlı teknik loglar (varsa)</li>
+      <li><strong>Yaş Bilgisi:</strong> Yaşa uygun egzersizleri sunmak için girilen yaş (6–18).</li>
+      <li><strong>Cihaz Bilgileri:</strong> Cihaz kimliği (UUID), model, üretici, platform, işletim sistemi ve sürümü ile sanal cihaz bilgisi.</li>
+      <li><strong>Uygulama Verileri:</strong> Kayıt tarihi, egzersiz oturumları, oturum zamanları, tamamlanma veya iptal durumu, ekipman tercihi, zorluk seviyesi ve değerlendirmesi, seçilen videolar ve izleme ilerlemesi.</li>
+      <li><strong>Kimlik Doğrulama ve Bağlantı Bilgileri:</strong> Firebase tarafından oluşturulan anonim kullanıcı kimliği ve oturum bilgileri; hizmet sağlayıcıların bağlantı ve güvenlik amacıyla işleyebildiği IP adresi ve istemci bilgileri.</li>
     </ul>
+    <p>
+      Ad soyad ve okul numarası alanlarının kaldırıldığı sürümde kayıt sırasında yalnızca yaş sorulur;
+      ad soyad, okul numarası veya doğum tarihi istenmez. Önceki sürümlerde verilen bilgiler mevcut
+      kayıtlarda bulunabilir. Bu alanların kayıt ekranından kaldırılması, eski kayıtları otomatik olarak silmez.
+      Önceki verileriniz için de aşağıdaki iletişim adresinden silme talebinde bulunabilirsiniz.
+    </p>
 
     <h2>3. Verileri Hangi Amaçlarla Kullanıyoruz?</h2>
     <ul>
-      <li>Hesap oluşturma ve kullanıcıyı tanımlama</li>
-      <li>Oturumların (session) oluşturulması, görüntülenmesi ve yönetilmesi</li>
-      <li>Uygulama güvenliği, hata tespiti ve performans iyileştirmeleri</li>
+      <li>Cihazı ve uygulama oturumunu tanımak, kayıt ve ilerleme bilgilerine erişim sağlamak</li>
+      <li>Yaşa, ekipman tercihine ve zorluk seviyesine uygun egzersizler sunmak</li>
+      <li>Egzersiz oturumlarını yönetmek ve videolara kalınan yerden devam edilmesini sağlamak</li>
+      <li>Uygulama güvenliğini ve içeriklere erişimi sağlamak</li>
       <li>Yasal yükümlülüklere uyum</li>
     </ul>
 
     <h2>4. Üçüncü Taraf Hizmetler ve Paylaşım</h2>
     <p>
-      Uygulama, altyapı hizmeti olarak <strong>Google Firebase / Cloud Firestore</strong> kullanabilir. Bu kapsamda veriler,
-      hizmetin sağlanması amacıyla Firebase altyapısında işlenebilir.
+      Uygulama, kullanıcı ve egzersiz kayıtlarını saklamak için <strong>Google Firebase / Cloud Firestore</strong>,
+      anonim oturum açmak için <strong>Firebase Authentication</strong> kullanır. Anonim oturum açılması,
+      cihaz ve kullanım verilerinin işlenmediği anlamına gelmez.
+    </p>
+    <p>
+      Video ve görsellere erişim bağlantıları <strong>Cloudflare Workers</strong> üzerinden alınır.
+      Bu isteklerde erişim kontrolü için Firebase kimlik doğrulama belirteci ile istenen içeriğin bilgisi gönderilir.
+      Bağlantı sırasında hizmet sağlayıcılar IP adresi gibi teknik verileri işleyebilir.
       Yasal bir zorunluluk olması hâlinde yetkili kurumlarla paylaşım yapılabilir.
+    </p>
+    <p>
+      Firebase hizmetlerinin veri işleme uygulamaları hakkında bilgi:
+      <a href="https://firebase.google.com/support/privacy">Firebase Gizlilik ve Güvenlik</a>.
     </p>
 
     <h2>5. Verilerin Saklanması ve Güvenliği</h2>
     <p>
-      Veriler, hizmetin sağlanması için gerekli süre boyunca saklanır. Güvenliği artırmak için erişim kontrolleri ve uygun teknik
-      önlemler uygulanır (ör. Firestore güvenlik kuralları).
+      Kullanıcı ve egzersiz kayıtları, hizmetin sağlanması için gerekli süre boyunca saklanır.
+      Uygulamanın çalışması ve oturumun devam etmesi için bazı kimlik ve ilerleme bilgileri cihazda yerel olarak da tutulur.
+      iOS üzerinde cihaz kimliği, güvenli depolama özelliği kullanılabildiğinde bu alanda saklanır.
+      Uygulamayı kaldırmak, sunucudaki kayıtları otomatik olarak silmez; silme talepleri için bizimle iletişime geçebilirsiniz.
     </p>
 
     <h2>6. Kullanıcı Hakları ve Talepler</h2>
@@ -69,12 +88,18 @@
       <li>Verilerinize erişim / düzeltme / silme talebi</li>
       <li>Hesap kapatma ve veri silme talebi</li>
     </ul>
-    <p><strong>İletişim:</strong> <a href="mailto:farukkose19@gmail.com">[E-posta]</a></p>
+    <p><strong>İletişim:</strong> <a href="mailto:farukkose19@gmail.com">farukkose19@gmail.com</a></p>
 
     <h2>7. Çocukların Gizliliği</h2>
     <p>
-      Uygulama, <strong>[hedef yaş grubunuzu yazın]</strong>. 13 yaş altından bilerek veri toplanması amaçlanmaz.
-      Eğer 13 yaş altı kullanıcıları hedeflemiyorsanız bu cümleyi olduğu gibi bırakabilirsiniz.
+      Uygulama, <strong>6–18 yaş grubuna</strong> yönelik egzersizler sunar; bu nedenle 13 yaş altındaki çocuklar da
+      kullanıcılar arasında yer alabilir. Çocuk kullanıcılar için de bu politikada açıklanan yaş, cihaz,
+      kimlik doğrulama ve egzersiz verileri işlenir.
+    </p>
+    <p>
+      Çocukların uygulamayı ebeveyn veya yasal vasilerinin gözetiminde kullanması önerilir.
+      Ebeveynler ve yasal vasiler, çocuklarının verileri hakkında bilgi almak, düzeltme veya silme talebinde bulunmak
+      için <a href="mailto:farukkose19@gmail.com">farukkose19@gmail.com</a> adresinden iletişime geçebilir.
     </p>
 
     <h2>8. Değişiklikler</h2>
@@ -82,10 +107,6 @@
       Bu politika zaman zaman güncellenebilir. Güncellemeler bu sayfa üzerinden yayımlanır.
     </p>
 
-    <hr />
-    <p class="meta">
-      Not: Bu sayfa Google Play için kamuya açık bir URL üzerinden yayınlanmalıdır (ör. GitHub Pages).
-    </p>
   </div>
 </body>
 </html>
